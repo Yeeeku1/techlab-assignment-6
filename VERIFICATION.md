@@ -21,4 +21,6 @@ Verified on 2026-10-31 with Microsoft Edge (Chromium) using real browser interac
 - Gallery filtering, visibility, image enlargement, Escape, close button, and focus return checked.
 - Local links and assets resolve. No browser JavaScript errors.
 - Student source files contain no comments; third-party jQuery retains its license.
-- Deployment has not been performed; this delivery is for local review.
+- These checks cover the local project before publication. GitHub Pages serves the same source files; see README.md for the repository and website links.
+
+
