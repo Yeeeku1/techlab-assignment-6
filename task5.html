@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="TechLab Assignment 6: Add & remove. Interactive jQuery experiments by Yerasyl Dauyl."
+    />
+    <title>Task 5 · Add & remove | TechLab</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <aside class="sidebar">
+      <a class="brand" href="index.html"
+        ><span class="brand-symbol">t.</span>techlab<span class="brand-period"
+          >.</span
+        ></a
+      >
+      <div class="edition">INTERACTION STUDIO / VOL. 02</div>
+      <button
+        id="menu-toggle"
+        type="button"
+        class="menu-toggle"
+        aria-expanded="false"
+        aria-controls="task-navigation"
+      >
+        Explore tasks <span>☰</span>
+      </button>
+      <nav id="task-navigation" aria-label="Assignment tasks">
+        <p class="nav-group">FOUNDATIONS</p>
+        <a href="index.html"><span>00</span>Setup</a
+        ><a href="task1.html"><span>01</span>Selectors & CSS</a>
+        <p class="nav-group">EFFECTS</p>
+        <a href="task2.html"><span>02</span>Visibility</a
+        ><a href="task3.html"><span>03</span>Fade effects</a
+        ><a href="task4.html"><span>04</span>Slide effects</a>
+        <p class="nav-group">DOM & INPUT</p>
+        <a href="task5.html" class="active" aria-current="page"
+          ><span>05</span>Add & remove<b aria-hidden="true">↗</b></a
+        ><a href="task6.html"><span>06</span>Attributes</a
+        ><a href="task7.html"><span>07</span>Live form</a>
+        <p class="nav-group">MOTION</p>
+        <a href="task8.html"><span>08</span>Basic animation</a
+        ><a href="task9.html"><span>09</span>Sequential animation</a
+        ><a href="task10.html"><span>10</span>Combined animation</a>
+        <p class="nav-group">MINI PROJECT</p>
+        <a href="task11.html"><span>11</span>Image gallery</a>
+      </nav>
+      <div class="student">
+        <span class="avatar">YD</span>
+        <div>
+          <strong>Yerasyl Dauyl</strong><small>SE-2527 · Assignment 06</small>
+        </div>
+      </div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar">
+        <span>Workspace <span class="slash">/</span> jQuery experiments</span
+        ><span class="top-badge"
+          ><span class="live-dot"></span> LEARN BY MAKING</span
+        >
+      </header>
+      <main id="main">
+        <div class="page-heading">
+          <div class="eyebrow">DOM & INPUT <span>/</span> EXPERIMENT 05</div>
+          <div class="heading-row">
+            <h1>Build your own list<span>.</span></h1>
+            <span class="task-chip">TASK 05</span>
+          </div>
+          <p>
+            Start at the beginning, add to the end, and keep your ideas moving.
+          </p>
+        </div>
+        <div class="lab-layout">
+          <section class="experiment-card" aria-label="Task 5 experiment">
+            <div class="card-header">
+              <span><b>05</b> Interactive playground</span
+              ><span class="live-label"
+                ><span class="live-dot"></span> LIVE</span
+              >
+            </div>
+            <div class="panel-body">
+              <div class="list-top">
+                <h2>The idea queue</h2>
+                <span id="item-count" class="pill">2 items</span>
+              </div>
+              <ul id="item-list" class="idea-list">
+                <li>Explore a new interaction</li>
+                <li>Build a small prototype</li>
+              </ul>
+              <p id="empty-list" class="empty" hidden>
+                Your queue is clear. Add a new idea.
+              </p>
+              <div class="actions">
+                <button type="button" id="append-item" class="button">
+                  Add Item</button
+                ><button
+                  type="button"
+                  id="prepend-item"
+                  class="button secondary"
+                >
+                  Add to beginning</button
+                ><button
+                  type="button"
+                  id="remove-item"
+                  class="button secondary"
+                >
+                  Remove Item
+                </button>
+              </div>
+              <p id="status" class="status" role="status">
+                Add at the end or at the beginning.
+              </p>
+            </div>
+          </section>
+          <aside class="guide-card">
+            <span class="guide-arrow">↗</span>
+            <p class="eyebrow">FIELD NOTES</p>
+            <h2>Make room for ideas.</h2>
+            <p>
+              Add Item appends a new idea. Add to beginning prepends one. Remove
+              Item removes the last idea in the queue.
+            </p>
+            <div class="method-box">
+              <span class="eyebrow">IN THIS EXPERIMENT</span
+              ><code>.append() · .prepend() · .remove()</code>
+            </div>
+            <div class="progress-label">
+              <span>EXPERIMENT 6 OF 12</span><span>50%</span>
+            </div>
+            <div class="progress-track"><span style="width: 50%"></span></div>
+          </aside>
+        </div>
+        <div class="page-navigation">
+          <a href="task4.html">← Slide effects</a
+          ><a href="task6.html">Attributes →</a>
+        </div>
+        <footer>
+          <span>TechLab · Small experiments. Real progress.</span
+          ><span>Yerasyl Dauyl / SE-2527</span>
+        </footer>
+        <p id="library-error" class="error-banner" hidden>
+          jQuery could not load. Check your connection and reload this page.
+        </p>
+        <noscript
+          ><p class="error-banner">
+            Please enable JavaScript to use these experiments.
+          </p></noscript
+        >
+      </main>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="jquery-fallback.js"></script>
+    <script src="common.js"></script>
+    <script src="task5.js"></script>
+  </body>
+</html>

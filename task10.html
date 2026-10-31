@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="TechLab Assignment 6: Combined animation. Interactive jQuery experiments by Yerasyl Dauyl."
+    />
+    <title>Task 10 · Combined animation | TechLab</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <aside class="sidebar">
+      <a class="brand" href="index.html"
+        ><span class="brand-symbol">t.</span>techlab<span class="brand-period"
+          >.</span
+        ></a
+      >
+      <div class="edition">INTERACTION STUDIO / VOL. 02</div>
+      <button
+        id="menu-toggle"
+        type="button"
+        class="menu-toggle"
+        aria-expanded="false"
+        aria-controls="task-navigation"
+      >
+        Explore tasks <span>☰</span>
+      </button>
+      <nav id="task-navigation" aria-label="Assignment tasks">
+        <p class="nav-group">FOUNDATIONS</p>
+        <a href="index.html"><span>00</span>Setup</a
+        ><a href="task1.html"><span>01</span>Selectors & CSS</a>
+        <p class="nav-group">EFFECTS</p>
+        <a href="task2.html"><span>02</span>Visibility</a
+        ><a href="task3.html"><span>03</span>Fade effects</a
+        ><a href="task4.html"><span>04</span>Slide effects</a>
+        <p class="nav-group">DOM & INPUT</p>
+        <a href="task5.html"><span>05</span>Add & remove</a
+        ><a href="task6.html"><span>06</span>Attributes</a
+        ><a href="task7.html"><span>07</span>Live form</a>
+        <p class="nav-group">MOTION</p>
+        <a href="task8.html"><span>08</span>Basic animation</a
+        ><a href="task9.html"><span>09</span>Sequential animation</a
+        ><a href="task10.html" class="active" aria-current="page"
+          ><span>10</span>Combined animation<b aria-hidden="true">↗</b></a
+        >
+        <p class="nav-group">MINI PROJECT</p>
+        <a href="task11.html"><span>11</span>Image gallery</a>
+      </nav>
+      <div class="student">
+        <span class="avatar">YD</span>
+        <div>
+          <strong>Yerasyl Dauyl</strong><small>SE-2527 · Assignment 06</small>
+        </div>
+      </div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar">
+        <span>Workspace <span class="slash">/</span> jQuery experiments</span
+        ><span class="top-badge"
+          ><span class="live-dot"></span> LEARN BY MAKING</span
+        >
+      </header>
+      <main id="main">
+        <div class="page-heading">
+          <div class="eyebrow">MOTION <span>/</span> EXPERIMENT 10</div>
+          <div class="heading-row">
+            <h1>Everything in motion<span>.</span></h1>
+            <span class="task-chip">TASK 10</span>
+          </div>
+          <p>
+            Position, size, and opacity change together in a single animation.
+          </p>
+        </div>
+        <div class="lab-layout">
+          <section class="experiment-card" aria-label="Task 10 experiment">
+            <div class="card-header">
+              <span><b>10</b> Interactive playground</span
+              ><span class="live-label"
+                ><span class="live-dot"></span> LIVE</span
+              >
+            </div>
+            <div class="panel-body">
+              <div id="stage" class="motion-stage" aria-label="Animation stage">
+                <span class="stage-label">START / 01</span>
+                <div
+                  id="motion-box"
+                  class="motion-box"
+                  aria-label="Animated square"
+                >
+                  ↗
+                </div>
+                <span class="stage-caption">ROOM TO MOVE</span>
+              </div>
+              <div class="motion-key">
+                <span>Position ↗</span><span>Size +</span
+                ><span>Opacity 45%</span>
+              </div>
+              <div class="actions">
+                <button type="button" id="animate-combined" class="button">
+                  Play together</button
+                ><button
+                  type="button"
+                  id="reset-animation"
+                  class="button secondary"
+                >
+                  Reset
+                </button>
+              </div>
+              <p id="status" class="status" role="status">
+                Three properties, one animation.
+              </p>
+            </div>
+          </section>
+          <aside class="guide-card">
+            <span class="guide-arrow">↗</span>
+            <p class="eyebrow">FIELD NOTES</p>
+            <h2>Better together.</h2>
+            <p>
+              Movement, growth, and fading happen at the same time. Reset
+              returns every property to its starting value.
+            </p>
+            <div class="method-box">
+              <span class="eyebrow">IN THIS EXPERIMENT</span
+              ><code>One .animate() call</code>
+            </div>
+            <div class="progress-label">
+              <span>EXPERIMENT 11 OF 12</span><span>92%</span>
+            </div>
+            <div class="progress-track">
+              <span style="width: 91.66666666666666%"></span>
+            </div>
+          </aside>
+        </div>
+        <div class="page-navigation">
+          <a href="task9.html">← Sequential animation</a
+          ><a href="task11.html">Image gallery →</a>
+        </div>
+        <footer>
+          <span>TechLab · Small experiments. Real progress.</span
+          ><span>Yerasyl Dauyl / SE-2527</span>
+        </footer>
+        <p id="library-error" class="error-banner" hidden>
+          jQuery could not load. Check your connection and reload this page.
+        </p>
+        <noscript
+          ><p class="error-banner">
+            Please enable JavaScript to use these experiments.
+          </p></noscript
+        >
+      </main>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="jquery-fallback.js"></script>
+    <script src="common.js"></script>
+    <script src="task10.js"></script>
+  </body>
+</html>

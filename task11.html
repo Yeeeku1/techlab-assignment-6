@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="TechLab Assignment 6: Image gallery. Interactive jQuery experiments by Yerasyl Dauyl."
+    />
+    <title>Task 11 · Image gallery | TechLab</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <aside class="sidebar">
+      <a class="brand" href="index.html"
+        ><span class="brand-symbol">t.</span>techlab<span class="brand-period"
+          >.</span
+        ></a
+      >
+      <div class="edition">INTERACTION STUDIO / VOL. 02</div>
+      <button
+        id="menu-toggle"
+        type="button"
+        class="menu-toggle"
+        aria-expanded="false"
+        aria-controls="task-navigation"
+      >
+        Explore tasks <span>☰</span>
+      </button>
+      <nav id="task-navigation" aria-label="Assignment tasks">
+        <p class="nav-group">FOUNDATIONS</p>
+        <a href="index.html"><span>00</span>Setup</a
+        ><a href="task1.html"><span>01</span>Selectors & CSS</a>
+        <p class="nav-group">EFFECTS</p>
+        <a href="task2.html"><span>02</span>Visibility</a
+        ><a href="task3.html"><span>03</span>Fade effects</a
+        ><a href="task4.html"><span>04</span>Slide effects</a>
+        <p class="nav-group">DOM & INPUT</p>
+        <a href="task5.html"><span>05</span>Add & remove</a
+        ><a href="task6.html"><span>06</span>Attributes</a
+        ><a href="task7.html"><span>07</span>Live form</a>
+        <p class="nav-group">MOTION</p>
+        <a href="task8.html"><span>08</span>Basic animation</a
+        ><a href="task9.html"><span>09</span>Sequential animation</a
+        ><a href="task10.html"><span>10</span>Combined animation</a>
+        <p class="nav-group">MINI PROJECT</p>
+        <a href="task11.html" class="active" aria-current="page"
+          ><span>11</span>Image gallery<b aria-hidden="true">↗</b></a
+        >
+      </nav>
+      <div class="student">
+        <span class="avatar">YD</span>
+        <div>
+          <strong>Yerasyl Dauyl</strong><small>SE-2527 · Assignment 06</small>
+        </div>
+      </div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar">
+        <span>Workspace <span class="slash">/</span> jQuery experiments</span
+        ><span class="top-badge"
+          ><span class="live-dot"></span> LEARN BY MAKING</span
+        >
+      </header>
+      <main id="main">
+        <div class="page-heading">
+          <div class="eyebrow">MINI PROJECT <span>/</span> EXPERIMENT 11</div>
+          <div class="heading-row">
+            <h1>The TechLab collection<span>.</span></h1>
+            <span class="task-chip">TASK 11</span>
+          </div>
+          <p>
+            A small gallery of big ideas. Explore the objects behind the
+            experiments.
+          </p>
+        </div>
+        <div class="lab-layout gallery-layout">
+          <section class="experiment-card" aria-label="Task 11 experiment">
+            <div class="card-header">
+              <span><b>11</b> Object gallery</span
+              ><span class="live-label"
+                ><span class="live-dot"></span> LIVE</span
+              >
+            </div>
+            <div class="panel-body">
+              <div class="gallery-toolbar">
+                <div
+                  class="filters"
+                  role="group"
+                  aria-label="Filter collection"
+                >
+                  <button
+                    class="filter active"
+                    type="button"
+                    data-filter="All"
+                    aria-pressed="true"
+                  >
+                    All</button
+                  ><button
+                    class="filter"
+                    type="button"
+                    data-filter="Audio"
+                    aria-pressed="false"
+                  >
+                    Audio</button
+                  ><button
+                    class="filter"
+                    type="button"
+                    data-filter="Workspace"
+                    aria-pressed="false"
+                  >
+                    Workspace</button
+                  ><button
+                    class="filter"
+                    type="button"
+                    data-filter="Imaging"
+                    aria-pressed="false"
+                  >
+                    Imaging
+                  </button>
+                </div>
+                <button
+                  id="toggle-gallery"
+                  class="text-button"
+                  type="button"
+                  aria-expanded="true"
+                  aria-controls="gallery-grid"
+                >
+                  Hide collection
+                </button>
+              </div>
+              <div id="gallery-grid" class="gallery-grid">
+                <button
+                  class="gallery-card"
+                  type="button"
+                  data-category="Audio"
+                  data-src="assets/orbit.svg"
+                  data-title="Orbit headphones"
+                  data-description="An open circle of sound."
+                  aria-label="Enlarge Orbit headphones"
+                >
+                  <span class="gallery-image"
+                    ><img
+                      src="assets/orbit.svg"
+                      alt="Orbit headphones"
+                      width="800"
+                      height="560"
+                    /><span class="enlarge-icon" aria-hidden="true"
+                      >↗</span
+                    ></span
+                  ><span class="gallery-meta"
+                    ><span
+                      ><small>Audio</small
+                      ><strong>Orbit headphones</strong></span
+                    ><span class="gallery-index">01</span></span
+                  ></button
+                ><button
+                  class="gallery-card"
+                  type="button"
+                  data-category="Workspace"
+                  data-src="assets/keys.svg"
+                  data-title="Studio keyboard"
+                  data-description="A little space for your next idea."
+                  aria-label="Enlarge Studio keyboard"
+                >
+                  <span class="gallery-image"
+                    ><img
+                      src="assets/keys.svg"
+                      alt="Studio keyboard"
+                      width="800"
+                      height="560"
+                    /><span class="enlarge-icon" aria-hidden="true"
+                      >↗</span
+                    ></span
+                  ><span class="gallery-meta"
+                    ><span
+                      ><small>Workspace</small
+                      ><strong>Studio keyboard</strong></span
+                    ><span class="gallery-index">02</span></span
+                  ></button
+                ><button
+                  class="gallery-card"
+                  type="button"
+                  data-category="Imaging"
+                  data-src="assets/camera.svg"
+                  data-title="Pocket camera"
+                  data-description="Keep a different perspective."
+                  aria-label="Enlarge Pocket camera"
+                >
+                  <span class="gallery-image"
+                    ><img
+                      src="assets/camera.svg"
+                      alt="Pocket camera"
+                      width="800"
+                      height="560"
+                    /><span class="enlarge-icon" aria-hidden="true"
+                      >↗</span
+                    ></span
+                  ><span class="gallery-meta"
+                    ><span
+                      ><small>Imaging</small
+                      ><strong>Pocket camera</strong></span
+                    ><span class="gallery-index">03</span></span
+                  ></button
+                ><button
+                  class="gallery-card"
+                  type="button"
+                  data-category="Audio"
+                  data-src="assets/speaker.svg"
+                  data-title="Wave speaker"
+                  data-description="Room-filling ideas, compact form."
+                  aria-label="Enlarge Wave speaker"
+                >
+                  <span class="gallery-image"
+                    ><img
+                      src="assets/speaker.svg"
+                      alt="Wave speaker"
+                      width="800"
+                      height="560"
+                    /><span class="enlarge-icon" aria-hidden="true"
+                      >↗</span
+                    ></span
+                  ><span class="gallery-meta"
+                    ><span
+                      ><small>Audio</small><strong>Wave speaker</strong></span
+                    ><span class="gallery-index">04</span></span
+                  ></button
+                ><button
+                  class="gallery-card"
+                  type="button"
+                  data-category="Workspace"
+                  data-src="assets/screen.svg"
+                  data-title="Focus display"
+                  data-description="A clearer view of what comes next."
+                  aria-label="Enlarge Focus display"
+                >
+                  <span class="gallery-image"
+                    ><img
+                      src="assets/screen.svg"
+                      alt="Focus display"
+                      width="800"
+                      height="560"
+                    /><span class="enlarge-icon" aria-hidden="true"
+                      >↗</span
+                    ></span
+                  ><span class="gallery-meta"
+                    ><span
+                      ><small>Workspace</small
+                      ><strong>Focus display</strong></span
+                    ><span class="gallery-index">05</span></span
+                  ></button
+                ><button
+                  class="gallery-card"
+                  type="button"
+                  data-category="Imaging"
+                  data-src="assets/lens.svg"
+                  data-title="Field lens"
+                  data-description="Notice the details."
+                  aria-label="Enlarge Field lens"
+                >
+                  <span class="gallery-image"
+                    ><img
+                      src="assets/lens.svg"
+                      alt="Field lens"
+                      width="800"
+                      height="560"
+                    /><span class="enlarge-icon" aria-hidden="true"
+                      >↗</span
+                    ></span
+                  ><span class="gallery-meta"
+                    ><span
+                      ><small>Imaging</small><strong>Field lens</strong></span
+                    ><span class="gallery-index">06</span></span
+                  >
+                </button>
+              </div>
+              <p id="status" class="status" role="status">
+                6 objects · Select an image to take a closer look.
+              </p>
+              <dialog id="gallery-dialog" aria-labelledby="dialog-title">
+                <button
+                  id="close-dialog"
+                  class="close-dialog"
+                  type="button"
+                  aria-label="Close image"
+                >
+                  ×</button
+                ><img
+                  id="dialog-image"
+                  src="assets/orbit.svg"
+                  alt="Orbit headphones"
+                  width="800"
+                  height="560"
+                />
+                <div class="dialog-copy">
+                  <h2 id="dialog-title">Orbit headphones</h2>
+                  <p id="dialog-description"></p>
+                </div>
+              </dialog>
+            </div>
+          </section>
+          <aside class="guide-card">
+            <span class="guide-arrow">↗</span>
+            <p class="eyebrow">FIELD NOTES</p>
+            <h2>A closer look.</h2>
+            <p>
+              Filter by collection, fade the thumbnails in or out, and select an
+              object to enlarge it. Press Escape or Close to return.
+            </p>
+            <div class="method-box">
+              <span class="eyebrow">IN THIS EXPERIMENT</span
+              ><code>Fade · filter · enlarge</code>
+            </div>
+            <div class="progress-label">
+              <span>EXPERIMENT 12 OF 12</span><span>100%</span>
+            </div>
+            <div class="progress-track"><span style="width: 100%"></span></div>
+          </aside>
+        </div>
+        <div class="page-navigation">
+          <a href="task10.html">← Combined animation</a
+          ><a href="index.html">Back to the beginning ↗</a>
+        </div>
+        <footer>
+          <span>TechLab · Small experiments. Real progress.</span
+          ><span>Yerasyl Dauyl / SE-2527</span>
+        </footer>
+        <p id="library-error" class="error-banner" hidden>
+          jQuery could not load. Check your connection and reload this page.
+        </p>
+        <noscript
+          ><p class="error-banner">
+            Please enable JavaScript to use these experiments.
+          </p></noscript
+        >
+      </main>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="jquery-fallback.js"></script>
+    <script src="common.js"></script>
+    <script src="task11.js"></script>
+  </body>
+</html>
